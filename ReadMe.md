@@ -1,2 +1,2 @@
 # Projects in this repo
--[x] Landing page
+- [x] Landing page
