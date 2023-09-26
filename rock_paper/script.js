@@ -53,5 +53,3 @@ function game(){
     console.log(`Player: ${playerScore} \nComputer: ${computerScore}`)
     
 }
-
-game()
