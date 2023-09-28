@@ -1,0 +1,13 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Set the default indentation style to spaces (you can use tabs if you prefer)
+[*]
+indent_style = space
+indent_size = 4
+
+# Specify the maximum line length for all files
+[*]
+max_line_length = 200
