@@ -18,6 +18,7 @@ function gameRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase()
 
+    // winning conditions e.g rock beats scissors
     const winningCond = {
         rock: 'scissors',
         paper: 'rock',
@@ -29,8 +30,10 @@ function gameRound(playerSelection, computerSelection){
     } else if (winningCond[computerSelection] === playerSelection){
         return [`You lose! ${computerSelection} beats ${playerSelection}`, -1] // -1 player
                                                                                 // lose
-    } else{
+    } else if ((winningCond[computerSelection] !== playerSelection) && (Object.keys(winningCond).includes(playerSelection) && (Object.keys(winningCond).includes(playerSelection)) ) ) {
         return [`You win. ${playerSelection} beats ${computerSelection}`, 1]; // 1 player win
+    }else {
+        return ["Invalid value", 500]
     }
 
 }
