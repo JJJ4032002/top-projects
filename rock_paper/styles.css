@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /*box-sizing: border-box;*/
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+
+
+h1{
+    text-align: center;
+}
+
+h1, .container-btns {
+    padding: 1rem;
+    background: #a1acbe;
+    font-family: Poppins, Roboto, cursive;
+}
+
+
+
+.btn {
+    color: white;
+    margin: 0 1rem;
+    flex-grow: 1;
+    padding: 2rem;
+    background: #5c5656;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 6px 0 rgba(24, 7, 7, 0.4), 0 -5px 6px 0 rgba(24, 7, 7, 0.4) ;
+}
+
+body{
+    background: #12171d;
+
+}
+
+.btn:hover {
+    color: yellow;
+    cursor: pointer;
+
+}
+
+.buttonIcons{
+    background: #a1acbe;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+
+}
+
+.buttonIcons i{
+    margin: 0 4rem;
+}
+
+.container-btns {
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+    align-items: flex-start;
+}
