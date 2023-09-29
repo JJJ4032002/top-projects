@@ -5,12 +5,12 @@
 ## Description of each
 
 - Hero Quotes is a simple website that showcases famous quotes said by numerous heros of marvel or DC
-  - Live website linked [here](https://lyton505.github.io/heroes-css/)
+  - Live website linked [here](https://hero505.netlify.app/)
   - The highlight of this project is the following:
     - CSS3 : creating layouts with Flexbox
 
 - Rock paper scissors is classic Rock paper scissors game where a user plays against a computer(well, sort of)
-  - Live website [here]()
+  - Live website [here](https://rock-paper505.netlify.app/)
   - The highlight of this project is the following:
     - CSS3: layouts with flexbox
     - Javascript: DOM manipulation, Javascript data structures(lists, dictionaries), iterations, destructuring
