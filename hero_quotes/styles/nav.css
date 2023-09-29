@@ -1,1 +1,103 @@
-{"payload":{"allShortcutsEnabled":false,"fileTree":{"styles":{"items":[{"name":"main-text.css","path":"styles/main-text.css","contentType":"file"},{"name":"nav.css","path":"styles/nav.css","contentType":"file"},{"name":"quote.css","path":"styles/quote.css","contentType":"file"}],"totalCount":3},"":{"items":[{"name":"image-assets","path":"image-assets","contentType":"directory"},{"name":"styles","path":"styles","contentType":"directory"},{"name":"LICENSE","path":"LICENSE","contentType":"file"},{"name":"README.md","path":"README.md","contentType":"file"},{"name":"index.html","path":"index.html","contentType":"file"}],"totalCount":5}},"fileTreeProcessingTime":3.859635,"foldersToFetch":[],"reducedMotionEnabled":null,"repo":{"id":661025574,"defaultBranch":"main","name":"heroes-css","ownerLogin":"Lyton505","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2023-07-01T14:55:06.000Z","ownerAvatar":"https://avatars.githubusercontent.com/u/65817176?v=4","public":true,"private":false,"isOrgOwned":false},"symbolsExpanded":false,"treeExpanded":true,"refInfo":{"name":"main","listCacheKey":"v0:1688223306.0","canEdit":false,"refType":"branch","currentOid":"be6aeaaf1e9bfd6f0028cd1fac66fe29ebb2b5a5"},"path":"styles/nav.css","currentUser":null,"blob":{"rawLines":["img{","    width: 200px;","    height: auto;","}","",".nav-list {","    display: flex;","    justify-content: space-between;","    align-items: flex-start;","}","",".nav-list li{","    list-style-type: none;","    flex: 1;","    color: #E5E7EB;","    font-size: 18px;","    margin: 10px 20px 0;","","}","","","#logo{","    flex: 4;","    font-size: 24px;","    color: #f9faf8;","    margin-left: 10px;","}","","#logo-img{","    height: 70px;","}","",".nav-area{","    background-color: #1F2937;","}","",".sub-nav-head{","    font-size: 48px;","    font-weight: bolder;","    color: #F9FAF8;","    margin-right: 400px;","}","",".sub-nav-no-img{","    display: flex;","    flex-direction: column;","}","",".sub-nav-no-img * {","    color: white;","    margin-bottom: 10px;","}","",".sub-nav-par p{","    font-size: 18px;","    color: #E5E7EB;","    text-align: left;","    margin-right: 120px;","","}","",".sub-nav{","    display: flex;","    justify-content: space-between;","    margin-top: 20px;","    margin-left: 80px;","    margin-right: 50px;","    padding: 20px;","}","",".sub-sign-btn *{","    background-color: #3882f6;","    border-radius: 4px;","    width: 110px;","    height: 30px;","    border: none;","}","",".sub-sign-btn button:active,",".sub-sign-btn button:hover","{","    background-color: #7e99c5;","    transition: background-color 750ms;","    cursor: pointer;","}","",".bottom-nav{","    color: white;","    background-color: #1f2937;","    text-align: center;","    padding: 30px;","}","",".sub-nav img{","    border: 1px solid rgb(48, 130, 231);","    border-radius: 6px;","}","","#logo-img:hover{","    cursor: pointer;","    transform: rotate(360deg) scale(1.2);","    transition: transform 250ms;","}"],"stylingDirectives":[[{"start":0,"end":3,"cssClass":"pl-ent"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":16,"cssClass":"pl-c1"},{"start":14,"end":16,"cssClass":"pl-smi"}],[{"start":4,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":9,"cssClass":"pl-c1"}],[{"start":4,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":19,"cssClass":"pl-c1"},{"start":19,"end":20,"cssClass":"pl-kos"}],[{"start":4,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":9,"cssClass":"pl-c1"},{"start":10,"end":12,"cssClass":"pl-ent"}],[{"start":4,"end":19,"cssClass":"pl-c1"},{"start":19,"end":20,"cssClass":"pl-kos"}],[{"start":4,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":10,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":19,"cssClass":"pl-c1"},{"start":17,"end":19,"cssClass":"pl-smi"}],[{"start":4,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":16,"cssClass":"pl-c1"},{"start":14,"end":16,"cssClass":"pl-smi"},{"start":17,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"},{"start":22,"end":23,"cssClass":"pl-c1"}],[],[],[],[],[{"start":0,"end":1,"cssClass":"pl-kos"},{"start":1,"end":5,"cssClass":"pl-c1"}],[{"start":4,"end":8,"cssClass":"pl-c1"},{"start":8,"end":9,"cssClass":"pl-kos"},{"start":10,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":19,"cssClass":"pl-c1"},{"start":17,"end":19,"cssClass":"pl-smi"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[],[],[{"start":0,"end":1,"cssClass":"pl-kos"},{"start":1,"end":9,"cssClass":"pl-c1"}],[{"start":4,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":16,"cssClass":"pl-c1"},{"start":14,"end":16,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":9,"cssClass":"pl-c1"}],[{"start":4,"end":20,"cssClass":"pl-c1"},{"start":20,"end":21,"cssClass":"pl-kos"},{"start":22,"end":29,"cssClass":"pl-pds"},{"start":22,"end":23,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":13,"cssClass":"pl-c1"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":19,"cssClass":"pl-c1"},{"start":17,"end":19,"cssClass":"pl-smi"}],[{"start":4,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"},{"start":18,"end":23,"cssClass":"pl-c1"},{"start":21,"end":23,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":15,"cssClass":"pl-c1"}],[{"start":4,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":18,"cssClass":"pl-c1"},{"start":18,"end":19,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":15,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":4,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":23,"cssClass":"pl-c1"},{"start":21,"end":23,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":12,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-ent"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":19,"cssClass":"pl-c1"},{"start":17,"end":19,"cssClass":"pl-smi"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":18,"cssClass":"pl-pds"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"}],[{"start":4,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"},{"start":18,"end":23,"cssClass":"pl-c1"},{"start":21,"end":23,"cssClass":"pl-smi"}],[],[],[],[{"start":1,"end":8,"cssClass":"pl-c1"}],[{"start":4,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"}],[{"start":4,"end":19,"cssClass":"pl-c1"},{"start":19,"end":20,"cssClass":"pl-kos"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":16,"end":20,"cssClass":"pl-c1"},{"start":18,"end":20,"cssClass":"pl-smi"}],[{"start":4,"end":15,"cssClass":"pl-c1"},{"start":15,"end":16,"cssClass":"pl-kos"},{"start":17,"end":21,"cssClass":"pl-c1"},{"start":19,"end":21,"cssClass":"pl-smi"}],[{"start":4,"end":16,"cssClass":"pl-c1"},{"start":16,"end":17,"cssClass":"pl-kos"},{"start":18,"end":22,"cssClass":"pl-c1"},{"start":20,"end":22,"cssClass":"pl-smi"}],[{"start":4,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":13,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-c1"}],[{"start":4,"end":20,"cssClass":"pl-c1"},{"start":20,"end":21,"cssClass":"pl-kos"},{"start":22,"end":29,"cssClass":"pl-pds"},{"start":22,"end":23,"cssClass":"pl-kos"}],[{"start":4,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":22,"cssClass":"pl-c1"},{"start":20,"end":22,"cssClass":"pl-smi"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":11,"end":16,"cssClass":"pl-c1"},{"start":14,"end":16,"cssClass":"pl-smi"}],[{"start":4,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":16,"cssClass":"pl-c1"},{"start":14,"end":16,"cssClass":"pl-smi"}],[{"start":4,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":13,"cssClass":"pl-c1"},{"start":14,"end":20,"cssClass":"pl-ent"},{"start":20,"end":21,"cssClass":"pl-kos"},{"start":21,"end":27,"cssClass":"pl-c1"},{"start":27,"end":28,"cssClass":"pl-kos"}],[{"start":1,"end":13,"cssClass":"pl-c1"},{"start":14,"end":20,"cssClass":"pl-ent"},{"start":20,"end":21,"cssClass":"pl-kos"},{"start":21,"end":26,"cssClass":"pl-c1"}],[],[{"start":4,"end":20,"cssClass":"pl-c1"},{"start":20,"end":21,"cssClass":"pl-kos"},{"start":22,"end":29,"cssClass":"pl-pds"},{"start":22,"end":23,"cssClass":"pl-kos"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":33,"end":38,"cssClass":"pl-c1"},{"start":36,"end":38,"cssClass":"pl-smi"}],[{"start":4,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[],[],[{"start":1,"end":11,"cssClass":"pl-c1"}],[{"start":4,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"}],[{"start":4,"end":20,"cssClass":"pl-c1"},{"start":20,"end":21,"cssClass":"pl-kos"},{"start":22,"end":29,"cssClass":"pl-pds"},{"start":22,"end":23,"cssClass":"pl-kos"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"}],[{"start":4,"end":11,"cssClass":"pl-c1"},{"start":11,"end":12,"cssClass":"pl-kos"},{"start":13,"end":17,"cssClass":"pl-c1"},{"start":15,"end":17,"cssClass":"pl-smi"}],[],[],[{"start":1,"end":8,"cssClass":"pl-c1"},{"start":9,"end":12,"cssClass":"pl-ent"}],[{"start":4,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"},{"start":12,"end":15,"cssClass":"pl-c1"},{"start":13,"end":15,"cssClass":"pl-smi"},{"start":22,"end":25,"cssClass":"pl-en"},{"start":26,"end":28,"cssClass":"pl-c1"},{"start":28,"end":29,"cssClass":"pl-kos"},{"start":30,"end":33,"cssClass":"pl-c1"},{"start":33,"end":34,"cssClass":"pl-kos"},{"start":35,"end":38,"cssClass":"pl-c1"}],[{"start":4,"end":17,"cssClass":"pl-c1"},{"start":17,"end":18,"cssClass":"pl-kos"},{"start":19,"end":22,"cssClass":"pl-c1"},{"start":20,"end":22,"cssClass":"pl-smi"}],[],[],[{"start":0,"end":1,"cssClass":"pl-kos"},{"start":1,"end":9,"cssClass":"pl-c1"},{"start":9,"end":10,"cssClass":"pl-kos"},{"start":10,"end":15,"cssClass":"pl-c1"}],[{"start":4,"end":10,"cssClass":"pl-c1"},{"start":10,"end":11,"cssClass":"pl-kos"}],[{"start":4,"end":13,"cssClass":"pl-c1"},{"start":13,"end":14,"cssClass":"pl-kos"},{"start":15,"end":21,"cssClass":"pl-en"},{"start":22,"end":28,"cssClass":"pl-c1"},{"start":25,"end":28,"cssClass":"pl-smi"},{"start":30,"end":35,"cssClass":"pl-en"},{"start":36,"end":39,"cssClass":"pl-c1"}],[{"start":4,"end":14,"cssClass":"pl-c1"},{"start":14,"end":15,"cssClass":"pl-kos"},{"start":26,"end":31,"cssClass":"pl-c1"},{"start":29,"end":31,"cssClass":"pl-smi"}],[]],"csv":null,"csvError":null,"dependabotInfo":{"showConfigurationBanner":false,"configFilePath":null,"networkDependabotPath":"/Lyton505/heroes-css/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":null,"repoAlertsPath":"/Lyton505/heroes-css/security/dependabot","repoSecurityAndAnalysisPath":"/Lyton505/heroes-css/settings/security_analysis","repoOwnerIsOrg":false,"currentUserCanAdminRepo":false},"displayName":"nav.css","displayUrl":"https://github.com/Lyton505/heroes-css/blob/main/styles/nav.css?raw=true","headerInfo":{"blobSize":"1.49 KB","deleteInfo":{"deleteTooltip":"You must be signed in to make or propose changes"},"editInfo":{"editTooltip":"You must be signed in to make or propose changes"},"ghDesktopPath":"https://desktop.github.com","gitLfsPath":null,"onBranch":true,"shortPath":"a645a46","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2FLyton505%2Fheroes-css%2Fblob%2Fmain%2Fstyles%2Fnav.css","isCSV":false,"isRichtext":false,"toc":null,"lineInfo":{"truncatedLoc":"103","truncatedSloc":"85"},"mode":"file"},"image":false,"isCodeownersFile":null,"isPlain":false,"isValidLegacyIssueTemplate":false,"issueTemplateHelpUrl":"https://docs.github.com/articles/about-issue-and-pull-request-templates","issueTemplate":null,"discussionTemplate":null,"language":"CSS","languageID":50,"large":false,"loggedIn":false,"newDiscussionPath":"/Lyton505/heroes-css/discussions/new","newIssuePath":"/Lyton505/heroes-css/issues/new","planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/Lyton505/heroes-css/blob/main/styles/nav.css","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","dismissStackNoticePath":"/settings/dismiss-notice/publish_stack_from_file","releasePath":"/Lyton505/heroes-css/releases/new?marketplace=true","showPublishActionBanner":false,"showPublishStackBanner":false},"renderImageOrRaw":false,"richText":null,"renderedFileInfo":null,"shortPath":null,"tabSize":8,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"repoOwner":"Lyton505","repoName":"heroes-css","showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","showDependabotConfigurationBanner":false,"actionsOnboardingTip":null},"truncated":false,"viewable":true,"workflowRedirectUrl":null,"symbols":{"timedOut":false,"notAnalyzed":true,"symbols":[]}},"copilotInfo":null,"csrf_tokens":{"/Lyton505/heroes-css/branches":{"post":"ZWQp05Z7C1SXaEAfxoE2Zyhk0fqTFwY6pFTkmyO4kjDj6x1kWCFDUt9bfil5k5kniV_cRXvPv2t85Y4bMqVWSA"},"/repos/preferences":{"post":"MlIurbF3nCKiYvjx3aRv24YFBMP2ddLPNhWKQAvpImgBxIbgMmsOhbJG6TiNDuYMcRVAQYQjG2d7WgGod_AhTw"}}},"title":"heroes-css/styles/nav.css at main · Lyton505/heroes-css"}
+img{
+    width: 200px;
+    height: auto;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.nav-list li{
+    list-style-type: none;
+    flex: 1;
+    color: #E5E7EB;
+    font-size: 18px;
+    margin: 10px 20px 0;
+
+}
+
+
+#logo{
+    flex: 4;
+    font-size: 24px;
+    color: #f9faf8;
+    margin-left: 10px;
+}
+
+#logo-img{
+    height: 70px;
+}
+
+.nav-area{
+    background-color: #1F2937;
+}
+
+.sub-nav-head{
+    font-size: 48px;
+    font-weight: bolder;
+    color: #F9FAF8;
+    margin-right: 400px;
+}
+
+.sub-nav-no-img{
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-nav-no-img * {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.sub-nav-par p{
+    font-size: 18px;
+    color: #E5E7EB;
+    text-align: left;
+    margin-right: 120px;
+
+}
+
+.sub-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 50px;
+    padding: 20px;
+}
+
+.sub-sign-btn *{
+    background-color: #3882f6;
+    border-radius: 4px;
+    width: 110px;
+    height: 30px;
+    border: none;
+}
+
+.sub-sign-btn button:active,
+.sub-sign-btn button:hover
+{
+    background-color: #7e99c5;
+    transition: background-color 750ms;
+    cursor: pointer;
+}
+
+.bottom-nav{
+    color: white;
+    background-color: #1f2937;
+    text-align: center;
+    padding: 30px;
+}
+
+.sub-nav img{
+    border: 1px solid rgb(48, 130, 231);
+    border-radius: 6px;
+}
+
+#logo-img:hover{
+    cursor: pointer;
+    transform: rotate(360deg) scale(1.2);
+    transition: transform 250ms;
+}
