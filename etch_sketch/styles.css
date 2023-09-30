@@ -1,5 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-
+    /*box-sizing: border-box;*/
 }
+
+html{
+    font-family: Poppins;
+    /*border: red 3px solid;*/
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*border: 2px dotted blue;*/
+    /*background: #b9b9ca;*/
+}
+
+footer{
+    margin-top: auto;
+    text-align: center;
+    padding: 2rem;
+    background: #4242aa;
+    color: white;
+}
+
+main{
+    width: 100%;
+}
+
+.squareGrid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*Code for the individual boxes*/
+
+.box{
+    width: 20px;
+    height: 20px;
+    background: maroon;
+}
+
