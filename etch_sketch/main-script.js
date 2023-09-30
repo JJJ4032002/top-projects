@@ -1,7 +1,6 @@
 const addElements = () => {
     for (let j = 0; j < 16; j++) {
         let rowDiv = document.createElement('div')  //new div to put box div. each a flex item
-        const rowNum = j;
         rowDiv.classList.add(`row-${j}`)
         rowDiv.setAttribute('style', 'display:flex;')
         for (let i = 0; i < 16; i++) {
