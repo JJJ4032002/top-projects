@@ -46,10 +46,14 @@ const addElements = ()=>  {
         divContainer.appendChild(rowDiv)
     }
     // console.log(divContainer);
-}  
-
-// const boxDiv = document.querySelectorAll('.box');
-// console.log(boxDiv)
-// boxDiv.forEach((myElement) => console.log("tipper"));
+}
 
 addElements()
+
+const boxDiv = document.querySelectorAll('.box');
+// console.log(boxDiv)
+boxDiv.forEach((myElement) => {
+    myElement.addEventListener("mouseover", () =>{
+        console.log(45)
+    })
+});
