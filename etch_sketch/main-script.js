@@ -1,13 +1,14 @@
 // this function creates the grid
 const addElements = () => {
-    for (let j = 0; j < 16; j++) {
+    let gridXY = gridDimensions;
+    for (let i = 1; i < gridXY + 1; i++) { //ros
         let rowDiv = document.createElement('div')  //new div to put box div. each a flex item
-        rowDiv.classList.add(`row-${j}`)
+        rowDiv.classList.add(`row-${gridDimensions}`)
         rowDiv.setAttribute('style', 'display:flex;')
-        for (let i = 0; i < 16; i++) {
-
+        for (let j = 1; j < gridXY + 1; j++) {
             let thisDiv = document.createElement('div');
             thisDiv.classList.add('box');
+            // thisDiv.innerText = i
             let col1 = 0;
             let col2 = 0;
             let col3 = 0;
@@ -39,28 +40,41 @@ const color = () => {
 // this function changes the background color of the element that has been passed in
 const changeColor = (elementIn) => {
     elementIn.style.backgroundColor = 'blue';
+}
 
+// eventListener on each button
+const addHoverListner = function () {
+    boxDiv.forEach((myElement) => {
+        myElement.addEventListener("mouseover", () => {
+            changeColor(myElement)
+        })
+    });
+};
+
+// 
+const removeGrid = () => {
+    const boxContainer = document.querySelectorAll('.row-16');
+    for (let i = 0; i < boxContainer.length; i++) {
+        divContainer.removeChild(boxContainer[i])
+    }
 }
 
 // variable initialization
-const gridContainer = document.querySelectorAll('.squareGrid');
-const divContainer = gridContainer[0];
+let gridDimensions = 16;
+const divContainer  = document.querySelector('.squareGrid');
 
-addElements()
+const btnGrid = document.querySelector('#buttonGrid')
+btnGrid.addEventListener('click', () => {
+    let gridNum = prompt("Enter a value")
+    gridDimensions = parseInt(gridNum)
+    removeGrid()
+    addElements()
+});
+
+addElements();
+
 // order matters. boxDiv can only be declared after addElements
 const boxDiv = document.querySelectorAll('.box');
 
-// eventListener on each button
-boxDiv.forEach((myElement) => {
-    myElement.addEventListener("mouseover", () => {
-        changeColor(myElement)
-    })
-});
-
-const btnGrid = document.querySelector('#buttonGrid')
-
-// toDo: make this work
-btnGrid.addEventListener('click', () => {
-    let gridNum = prompt("Enter a value")
-    console.log(gridNum)
-});
+// order matters. this can only be run after addElements
+addHoverListner()
