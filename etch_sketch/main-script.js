@@ -14,9 +14,9 @@ const addGrid = () => {
             let col3 = 0;
             [col1, col2, col3] = color(); // destructuring
             thisDiv.setAttribute('style', `
-                background: rgba(${col1},${col3}, ${col2}, 0.95 );
+                background: rgba(208, 217, 199, 0.95);
                 color:black;
-                border: 2px solid black;
+                border: 1px solid black;
             `);
             rowDiv.appendChild(thisDiv); //append each loop div to rowdiv
         }
@@ -30,7 +30,7 @@ const color = () => {
 
     for (let j = 0; j <= 2; j++) {
         // set to white
-        let colorValue = 255;
+        let colorValue = 'blue';
 
         colorDiv.push(colorValue);
     }
@@ -39,7 +39,12 @@ const color = () => {
 
 // this function changes the background color of the element that has been passed in
 const changeColor = (elementIn) => {
-    elementIn.style.backgroundColor = 'blue';
+    let col1 = Math.floor(Math.random() * 255)
+    let col2 = Math.floor(Math.random() * 255)
+    let col3 = Math.floor(Math.random() * 255)
+    //rainbow color style
+    elementIn.style.backgroundColor = `rgba(${col1},${col3}, ${col2}, 0.95)`
+    
 }
 
 // eventListener on each button
@@ -61,7 +66,7 @@ const removeGrid = () => {
 
 // variable initialization
 let gridDimensions = 16;
-const divContainer  = document.querySelector('.squareGrid');
+const divContainer = document.querySelector('.squareGrid');
 
 const btnGrid = document.querySelector('#buttonGrid')
 btnGrid.addEventListener('click', () => {
