@@ -59,6 +59,7 @@ boxDiv.forEach((myElement) => {
 
 const btnGrid = document.querySelector('#buttonGrid')
 
+// toDo: make this work
 btnGrid.addEventListener('click', () => {
     let gridNum = prompt("Enter a value")
     console.log(gridNum)
