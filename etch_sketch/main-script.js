@@ -1,9 +1,9 @@
 // this function creates the grid
-const addElements = () => {
+const addGrid = () => {
     let gridXY = gridDimensions;
     for (let i = 1; i < gridXY + 1; i++) { //ros
         let rowDiv = document.createElement('div')  //new div to put box div. each a flex item
-        rowDiv.classList.add(`row-${gridDimensions}`)
+        rowDiv.classList.add(`rows`)
         rowDiv.setAttribute('style', 'display:flex;')
         for (let j = 1; j < gridXY + 1; j++) {
             let thisDiv = document.createElement('div');
@@ -43,7 +43,7 @@ const changeColor = (elementIn) => {
 }
 
 // eventListener on each button
-const addHoverListner = function () {
+const addHoverListener = function () {
     boxDiv.forEach((myElement) => {
         myElement.addEventListener("mouseover", () => {
             changeColor(myElement)
@@ -53,7 +53,7 @@ const addHoverListner = function () {
 
 // 
 const removeGrid = () => {
-    const boxContainer = document.querySelectorAll('.row-16');
+    let boxContainer = document.querySelectorAll('.rows');
     for (let i = 0; i < boxContainer.length; i++) {
         divContainer.removeChild(boxContainer[i])
     }
@@ -68,15 +68,15 @@ btnGrid.addEventListener('click', () => {
     let gridNum = prompt("Enter a value")
     gridDimensions = parseInt(gridNum)
     removeGrid()
-    addElements()
+    addGrid()
     boxDiv = document.querySelectorAll('.box');
-    addHoverListner()
+    addHoverListener()
 });
 
-addElements();
+addGrid();
 
-// order matters. boxDiv can only be declared after addElements
+// order matters. boxDiv can only be declared after addGrid
 let boxDiv = document.querySelectorAll('.box');
 
-// order matters. this can only be run after addElements
-addHoverListner()
+// order matters. this can only be run after addGrid
+addHoverListener()
