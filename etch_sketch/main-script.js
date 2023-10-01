@@ -69,12 +69,14 @@ btnGrid.addEventListener('click', () => {
     gridDimensions = parseInt(gridNum)
     removeGrid()
     addElements()
+    boxDiv = document.querySelectorAll('.box');
+    addHoverListner()
 });
 
 addElements();
 
 // order matters. boxDiv can only be declared after addElements
-const boxDiv = document.querySelectorAll('.box');
+let boxDiv = document.querySelectorAll('.box');
 
 // order matters. this can only be run after addElements
 addHoverListner()
