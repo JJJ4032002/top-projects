@@ -52,7 +52,7 @@ const changeColor = (elementIn) => {
     // while (colorValue < 120){
     //     ++colorValue
     // console.log(elementIn)
-    elementIn.style = 'background: blue';
+    elementIn.style.backgroundColor = 'blue';
     
 }
 
