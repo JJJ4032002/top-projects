@@ -4,46 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
     <title>SheerLock</title>
 </head>
 <body>
 <main class="mainContainer">
 
     <div class="imgContainer">
-        <img src="" alt="" class="logo">
-        <h2 class="logoText"></h2>
-        <h5 class="photoCreds"></h5>
+        <img src="assets/odin-leaf.jpg" alt="green leaves" class="logoBack">
+        <div class="logoSurround">
+            <img src="assets/odin-lined.png" alt="odin logo" class="logo">
+            <h2 class="logoText">GOATIN</h2>
+        </div>
+        <h5 class="photoCreds">Photo by the Halie West on <a href="http://google.com">Unsplash</a></h5>
     </div>
 
     <div class="loginInfo">
         <div class="loginHeader">
-            <h3 class="headText"></h3>
-            <h2 class="subHeadText"></h2>
+            <h3 class="headText">
+                Join Our Thriving Community Today and Unlock Limitless Possibilities:
+                Create Your Account and Start Exploring a World of Opportunities, Connections,
+                and Exclusive Benefits!
+            </h3>
+            <h2 class="subHeadText">The next great thing...think about it</h2>
         </div>
 
         <div class="formRegion">
-            <h3 class="formHeader"></h3>
+            <h3 class="formHeader">Start here</h3>
 
             <div class="formInfo">
-                <form action="#" method="post">
+                <form class="mainForm" action="#" method="post">
 
-                    <label for="firstName"></label>
-                    <input id="firstName" type="text" name="firstName">
+                    <div>
+                        <div class="formGroup">
+                            <label for="firstName">First Name</label>
+                            <input id="firstName" type="text" name="firstName">
+                        </div>
 
-                    <label for="lastName"></label>
-                    <input id="lastName" type="text" name="firstName">
+                        <div class="formGroup">
+                            <label for="lastName">Last Name</label>
+                            <input id="lastName" type="text" name="lastName">
+                        </div>
+                    </div>
 
-                    <label for="email"></label>
-                    <input id="email" type="text" name="firstName">
 
-                    <label for="phoneNum"></label>
-                    <input id="phoneNum" type="text" name="firstName">
+                    <div>
+                        <div class="formGroup">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email">
+                        </div>
 
-                    <label for="password1"></label>
-                    <input id="password1" type="text" name="firstName">
+                        <div class="formGroup">
+                            <label for="phoneNum">Phone number</label>
+                            <input id="phoneNum" type="number" name="phoneNum">
+                        </div>
+                    </div>
 
-                    <label for="password2"></label>
-                    <input id="password2" type="text" name="firstName">
+
+                    <div>
+                        <div class="formGroup">
+                            <label for="password1">Password</label>
+                            <input id="password1" type="password" name="password1">
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="password2">Confirm password</label>
+                            <input id="password2" type="password" name="password2">
+                        </div>
+                    </div>
 
                 </form>
             </div>
@@ -51,11 +80,13 @@
         </div>
 
         <div class="accountNext">
-            <button class="createAcc"></button>
-            <h6 class="existingAcc"></h6>
+            <button class="createAcc">Create account</button>
+            <h6 class="existingAcc">Already have an account? Login
+                <a class="loginRedirection" href="https://newseasonsyouthprogram.com/">here</a></h6>
         </div>
 
     </div>
+
 </main>
 </body>
 </html>

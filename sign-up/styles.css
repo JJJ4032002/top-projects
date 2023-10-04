@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*region The top doc stuff*/
+* {
+    font-family: "Montserrat", "Young Serif", serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Young Serif", serif;
+    --sideBarWidth: 100%;
+    --logo-top: 20%;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+/*endregion*/
+
+/*region All side bar stuff*/
+.imgContainer {
+    position: relative;
+    /*border: red solid 2px;*/
+    /*height: 100vh;*/
+}
+
+.logoBack {
+    height: 99.9%;
+    width: var(--sideBarWidth);
+    border-radius: 5px;
+    z-index: -1;
+    /*border: red solid 2px;*/
+}
+
+.logoSurround {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: var(--sideBarWidth);
+    height: 15%;
+    background-color: rgba(141, 128, 128, 0.4);
+}
+
+.logo, .logoText {
+    position: absolute;
+    top: var(--logo-top);
+}
+
+.logo {
+    left: 1%;
+    height: 100px;
+}
+
+.logoText {
+    font-weight: 400;
+    top: 20%;
+    color: white;
+    left: 20%;
+    font-size: 4.5rem;
+}
+
+.photoCreds {
+    font-size: 14px;
+    font-weight: 400;
+    color: #d5d2d2;
+    position: absolute;
+    bottom: 2%;
+    left: 20%;
+
+}
+
+.photoCreds a {
+    color: #edebeb;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/*endregion*/
+
+
+/*region Side by side*/
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    /*border: blue solid 2px;*/
+    height: 100vh;
+}
+
+.imgContainer {
+    flex: 0.6;
+}
+
+.loginInfo {
+    flex: 1;
+}
+
+/*endregion*/
+
+
+/*region Top header above form*/
+.loginInfo {
+    /*border: 2px blue solid;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.loginHeader {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(104, 98, 98, 0.1);
+}
+
+.subHeadText, .headText {
+    font-family: "Montserrat", serif;
+    font-weight: 300;
+}
+
+.headText {
+    font-style: italic;
+    margin-bottom: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.subHeadText {
+    margin-top: 4rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+/*endregion*/
+
+
+.formRegion {
+    /*border: red solid 1px;*/
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.formHeader {
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    /*border: red solid 1px;*/
+    padding: 1.2rem;
+}
+
+.formInfo {
+    display: flex;
+    flex-direction: column;
+    /*border: blue 2px solid;*/
+}
+
+.mainForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainForm > div {
+    padding: 1.2rem;
+    /*border: 2px solid red;*/
+    display: flex;
+    justify-content: space-between;
+    /*gap: 10rem;*/
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+input {
+    border: solid 2px #af9f9f;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+/*toDO: complete validation and buttons + login area*/
