@@ -38,8 +38,8 @@
 
                     <div>
                         <div class="formGroup">
-                            <label for="firstName">First Name</label>
-                            <input id="firstName" type="text" name="firstName">
+                            <label for="firstName">First Names</label>
+                            <input required id="firstName" type="text" name="firstName">
                         </div>
 
                         <div class="formGroup">
@@ -52,12 +52,12 @@
                     <div>
                         <div class="formGroup">
                             <label for="email">Email</label>
-                            <input id="email" type="email" name="email">
+                            <input id="email" type="email" name="email" minlength="1">
                         </div>
 
                         <div class="formGroup">
                             <label for="phoneNum">Phone number</label>
-                            <input id="phoneNum" type="number" name="phoneNum">
+                            <input id="phoneNum" type="tel" name="phoneNum" minlength="5">
                         </div>
                     </div>
 
@@ -74,15 +74,16 @@
                         </div>
                     </div>
 
+                    <div class="accountNext">
+                        <button type="submit" class="createAcc">Create account</button>
+                        <h6 class="existingAcc">Already have an account?
+                            <a class="loginRedirection" href="https://newseasonsyouthprogram.com/">Login here</a>
+                        </h6>
+                    </div>
+
                 </form>
             </div>
 
-        </div>
-
-        <div class="accountNext">
-            <button class="createAcc">Create account</button>
-            <h6 class="existingAcc">Already have an account? Login
-                <a class="loginRedirection" href="https://newseasonsyouthprogram.com/">here</a></h6>
         </div>
 
     </div>
