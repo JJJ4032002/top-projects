@@ -2,6 +2,9 @@
 
 - [x] Hero Quotes
 - [x] Rock Paper Scissors
+- [x] Goatin Sign up form
+- [x] Etch a sketch
+- [x] Admin Dashboard
 
 ## Description of each
 
@@ -16,9 +19,21 @@
         - CSS3: layouts with flexbox
         - Javascript: DOM manipulation, Javascript data structures(lists, dictionaries), iterations, destructuring
 
+- Goatin Sign up form is a simple sign up form for a fictional company called Goatin
+    - Live website [here](https://goatin505.netlify.app/)
+    - The highlight of this project is the following:
+        - CSS3: layouts with flexbox, positioning
+        - Javascript: DOM manipulation, Javascript data structures(lists, dictionaries), iterations, destructuring
+
+- Etch a sketch is a simple drawing app where a user can draw on a grid
+    - Live website [here](https://etch-a-sketch505.netlify.app/)
+    - The highlight of this project is the following:
+        - CSS3: layouts with flexbox
+        - Javascript: DOM manipulation, Javascript data structures(lists, dictionaries), iterations, destructuring, event listeners
+
 ## ToDO
 
-1. Improve UI of Rock Paper Scissors(RPS) and Hero Quotes
+1. Improve UI of all projects
 2. Make both sites responsive
 3. Develop strategies for computer to beat human player more often by observing patterns of user choice and predictions
 4. Use grid for Etch a sketch
