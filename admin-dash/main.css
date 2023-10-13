@@ -118,14 +118,17 @@ i {
 
 .top {
     display: grid;
-    grid-template: 1fr 1fr / 1fr;
+    grid-template: .2fr .2fr / 1fr;
     background-color: white;
+    height: 50%;
+    row-gap: 3rem;
 }
 
 .navRow {
     display: grid;
-    grid-template: 1fr / 1fr 4fr repeat(4, 1fr);
+    grid-template: .5fr / 1fr 4fr repeat(4, 1fr);
     column-gap: .5rem;
+    height: 20%;
 }
 
 input {
