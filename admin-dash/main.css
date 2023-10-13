@@ -231,8 +231,6 @@ i:hover {
 }
 
 .user img {
-    align-self: center;
-    justify-self: end;
     height: 3rem;
     grid-area: 1/ 1/ 3/ 2;
 }
