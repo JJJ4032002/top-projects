@@ -231,6 +231,7 @@ i:hover {
     border-radius: .5rem;
     padding: .4rem;
     min-width: 110px;
+    border-left: 8px #d48e12 solid;
 }
 
 .card h3 {
