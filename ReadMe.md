@@ -31,6 +31,11 @@
         - CSS3: layouts with flexbox
         - Javascript: DOM manipulation, Javascript data structures(lists, dictionaries), iterations, destructuring, event listeners
 
+- AdminDash is a simple admin dashboard for a fictional company called Goatin
+    - Live website [here](https://dash505.netlify.app/)
+    - The highlight of this project is the following:
+        - CSS3: layouts with flexbox, positioning, grid layout
+
 ## ToDO
 
 1. Improve UI of all projects
