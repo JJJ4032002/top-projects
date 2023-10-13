@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/*region non-essential: remove padding and all*/
 * {
     padding: 0;
     margin: 0;
@@ -12,11 +13,39 @@ body {
     height: 100%;
 }
 
+/*endregion*/
+
+/*region On hover effects*/
+button:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.dashNav h3:hover {
+    color: #666260;
+    cursor: pointer;
+}
+
+.navRow :nth-child(3):hover {
+    cursor: pointer;
+}
+
+i:hover {
+    color: #baa197;
+    cursor: pointer;
+}
+
+/*endregion*/
+
+
+/*region Main container*/
 .container {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 5fr;
 }
+
+/*endregion*/
 
 /*region Column1: Side*/
 .col1 {
@@ -31,7 +60,6 @@ body {
     display: flex;
     align-items: flex-start;
     height: 10vh;
-    /*border: 4px red solid;*/
 }
 
 .dashLogo h2 {
@@ -89,7 +117,6 @@ i {
 }
 
 .top {
-    /*border: #1F2937 solid 4px;*/
     display: grid;
     grid-template: 1fr 1fr / 1fr;
     background-color: white;
@@ -173,7 +200,7 @@ button {
 }
 
 p {
-    font-size: .8rem;
+    font-size: .75rem;
     color: rgb(128, 128, 128);
 }
 
@@ -184,15 +211,23 @@ p {
     padding: .4rem;
 }
 
+.card h3 {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
 .announcementsBoard {
     display: grid;
     grid-template: repeat(3, 5.5rem) / 1fr;
     row-gap: 1.5rem;
+    background-color: white;
+    padding: .6rem;
+    border-radius: .5rem;
 }
 
 .announcementsBoard h3 {
     font-size: .8rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .announcementsBoard p {
@@ -228,3 +263,16 @@ p {
     font-size: .8rem;
     font-weight: 600;
 }
+
+.trendingUsers {
+    background-color: white;
+    padding: .6rem;
+    border-radius: .5rem;
+}
+
+
+
+
+
+
+
