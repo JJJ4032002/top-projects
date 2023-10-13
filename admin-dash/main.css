@@ -198,11 +198,6 @@ p {
     row-gap: .1rem;
 }
 
-.trendingUsers div {
-    align-self: start;
-    justify-self: start;
-}
-
 .user {
     display: grid;
     grid-template: 35px 35px/ 1fr 1fr;
