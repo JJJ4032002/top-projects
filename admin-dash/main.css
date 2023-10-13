@@ -260,6 +260,13 @@ i:hover {
 /*endregion*/
 
 /*region Generic element styles*/
+
+.greetingUser {
+    font-size: .8rem;
+    font-weight: 700;
+    color: rgb(60, 60, 60);
+}
+
 p {
     font-size: .75rem;
     color: rgb(128, 128, 128);
