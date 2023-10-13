@@ -113,7 +113,7 @@ i {
 
 .col2 {
     display: grid;
-    grid-template: 1fr 10fr / 1fr;
+    grid-template: 1fr 2fr / 1fr;
 }
 
 .top {
