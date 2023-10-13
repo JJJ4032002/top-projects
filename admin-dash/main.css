@@ -21,6 +21,11 @@ body {
 /*region Column1: Side*/
 .col1 {
     background-color: rgba(75, 167, 221, 0.4);
+    padding: .6rem;
+}
+
+.col2 {
+    padding: .6rem;
 }
 
 .dashLogo {
