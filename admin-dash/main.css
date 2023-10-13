@@ -1,6 +1,221 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     padding: 0;
     margin: 0;
+    font-family: Montserrat, serif;
     box-sizing: border-box;
+    --distance-from-top: 1.1rem;
 }
 
+body {
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr;
+}
+
+/*region Column1: Side*/
+.col1 {
+    background-color: rgba(75, 167, 221, 0.4);
+}
+
+.dashLogo {
+    display: flex;
+    align-items: flex-start;
+    height: 10vh;
+    /*border: 4px red solid;*/
+}
+
+.dashLogo h2 {
+    margin-top: .6rem;
+}
+
+.dashLogo img {
+    position: relative;
+    height: 3.1rem;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.col1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 600px;
+}
+
+.dashNav {
+    display: grid;
+    /*grid-template-columns: 1fr;*/
+    /*grid-template-rows: 2fr 1fr;*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 100px;
+    grid-row-gap: 6rem;
+}
+
+i {
+    margin-right: .6rem;
+}
+
+.topNav, .bottomNav {
+    grid-row-gap: 1.2rem;
+}
+
+.topNav {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr;
+
+}
+
+.bottomNav {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+}
+
+/* endregion */
+
+.col2 {
+    display: grid;
+    grid-template: 1fr 10fr / 1fr;
+}
+
+.top {
+    /*border: #1F2937 solid 4px;*/
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    background-color: white;
+}
+
+.navRow {
+    display: grid;
+    grid-template: 1fr / 1fr 4fr repeat(4, 1fr);
+    column-gap: .5rem;
+}
+
+input {
+    margin-top: 5px;
+    height: 2rem;
+    border-radius: .4rem;
+    border: none;
+    padding: 2px;
+    background-color: rgba(133, 127, 127, 0.3);
+    grid-area: 1 / 2/2/4;
+}
+
+.navRow :nth-child(3) {
+    margin-left: 2rem;
+    /*border: red solid 4px;*/
+}
+
+.navRow h3 {
+    font-weight: 500;
+    font-size: .7rem;
+}
+
+img {
+    height: 2rem;
+}
+
+.headerRow {
+    display: grid;
+    grid-template: 1fr / 3fr repeat(3, 1fr);
+    column-gap: 1rem;
+}
+
+.greeting {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}
+
+.greeting :nth-child(2) {
+    text-align: start;
+}
+
+.greeting img {
+    height: 80%;
+    grid-area: 1/ 1/ 3/ 2;
+}
+
+button {
+    color: black;
+    border: none;
+    border-radius: 1.5rem;
+    height: 2rem;
+}
+
+.bottom {
+    display: grid;
+    grid-template: 40px repeat(2, 400px)/ 2fr 1fr;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template: repeat(3, 200px) / repeat(2, 1fr);
+    column-gap: 1.2rem;
+    row-gap: 1.2rem;
+    grid-area: 2 / 1/ 4/ 2;
+}
+
+p {
+    font-size: .8rem;
+    color: rgb(128, 128, 128);
+}
+
+.card {
+    /*border: blue solid 1px;*/
+}
+
+.announcementsBoard {
+    display: grid;
+    grid-template: repeat(3, 5.5rem) / 1fr;
+    row-gap: 1.5rem;
+}
+
+.announcementsBoard h3 {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.announcementsBoard p {
+    font-size: .7rem;
+    color: rgb(128, 128, 128);
+}
+
+.trendingBoard {
+    display: grid;
+    grid-template: 20px 2fr/ 1fr;
+    row-gap: 5px;
+}
+
+.trendingUsers {
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr;
+    row-gap: .1rem;
+}
+
+.trendingUsers div {
+    align-self: start;
+    justify-self: start;
+}
+
+.user {
+    display: grid;
+    grid-template: 35px 35px/ 1fr 1fr;
+}
+
+.user img {
+    align-self: center;
+    justify-self: end;
+    height: 3rem;
+    grid-area: 1/ 1/ 3/ 2;
+}
+
+.user h3 {
+    font-size: .8rem;
+    font-weight: 600;
+}
