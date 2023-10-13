@@ -37,7 +37,6 @@ i:hover {
 
 /*endregion*/
 
-
 /*region Main container*/
 .container {
     display: grid;
@@ -56,7 +55,7 @@ i:hover {
 
 .col2 {
     display: grid;
-    grid-template: 1fr 2fr / 1fr;
+    grid-template: .4fr 2fr / 1fr;
 }
 
 /*endregion*/
@@ -187,6 +186,28 @@ i:hover {
 
 /*endregion*/
 
+/*region Grid element specific*/
+.greeting img {
+    height: 80%;
+    grid-area: 1/ 1/ 3/ 2;
+}
+
+.user img {
+    height: 3rem;
+    grid-area: 1/ 1/ 3/ 2;
+}
+
+.announcementsBoard > div {
+    border-bottom: 1px solid rgba(17, 4, 4, 0.1);
+}
+
+.announcementsBoard > div:last-child {
+    border-bottom: none;
+}
+
+/*endregion*/
+
+/*region Prettifying elements, no grid stuff*/
 .top, .bottom, .trendingUsers {
     padding: .6rem;
 }
@@ -202,11 +223,6 @@ i:hover {
 
 .greeting :nth-child(2) {
     text-align: start;
-}
-
-.greeting img {
-    height: 80%;
-    grid-area: 1/ 1/ 3/ 2;
 }
 
 .card {
@@ -230,10 +246,6 @@ i:hover {
     color: rgb(128, 128, 128);
 }
 
-.user img {
-    height: 3rem;
-    grid-area: 1/ 1/ 3/ 2;
-}
 
 .user h3 {
     font-size: .8rem;
@@ -244,6 +256,8 @@ i:hover {
     background-color: white;
     border-radius: .5rem;
 }
+
+/*endregion*/
 
 /*region Generic element styles*/
 p {
