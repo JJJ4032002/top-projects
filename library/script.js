@@ -25,7 +25,7 @@ const cardCont = document.querySelector('.bookCardContainer')
 
 dBox.addEventListener('close', () => dBox.close())
 showDBoxBtn.addEventListener('click', () => dBox.showModal())
-closeBtn.addEventListener('click', (e) => {
+closeBtn.addEventListener('click', () => {
     console.log("Button click: close")
     dBox.close()
 })

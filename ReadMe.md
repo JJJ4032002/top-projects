@@ -36,11 +36,18 @@
     - The highlight of this project is the following:
         - CSS3: layouts with flexbox, positioning, grid layout
 
+- StackOverBook is a simple library app where a user can add books to a list and mark them as read or not read
+    - Live website [here](https://lib505.netlify.app/)
+    - The highlight of this project is the following:
+        - CSS3: layouts with flexbox, positioning, grid layout
+        - Javascript: DOM manipulation, Javascript data structures(lists, dictionaries, objects), iterations, destructuring, event listeners, object constructors
+
 ## ToDO
 
 1. Improve UI of all projects
-2. Make both sites responsive
+2. Make both all sites responsive
 3. Develop strategies for computer to beat human player more often by observing patterns of user choice and predictions
 4. Use grid for Etch a sketch
+5. Add feature to remove books from library
 
 ### Any suggestions or feedback? Feel free to let me know
