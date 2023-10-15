@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a76f0107b1.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="resources/menu-book.svg">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+
+<header>
+    <h1 id="mainHeader">StackOverBook</h1>
+    <button>
+        Login
+    </button>
+</header>
+
+<h2>
+    <i class="fa-solid fa-plus"></i>Add a book
+</h2>
+
+<dialog id="bookBox">
+
+    <form>
+
+        <div class="formInput">
+            <div>
+                <label for="title">Book title: </label>
+                <input type="text" name="bookTitle" id="title">
+            </div>
+
+            <div><label for="bookAuthor">Book author: </label>
+                <input type="text" name="bookTitle" id="bookAuthor"></div>
+
+            <div>
+                <label for="title">Book Release Year: </label>
+                <select>
+                    <option value="default">2015</option>
+                    <option value="default">2018</option>
+                    <option value="default">2021</option>
+                    <option value="default">2023</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="isRead"> Did you read this book?</label>
+                <input type="checkbox" id="isRead" name="vehicle1" value="Bike">
+            </div>
+        </div>
+
+        <div class="formButtons">
+            <button id="closeBtn">Close</button>
+            <button id="submitBtn">Submit</button>
+        </div>
+
+    </form>
+
+
+</dialog>
+
+<footer>
+    Copyright &copy; Spurz 2023
+</footer>
+
+</body>
+</html>
