@@ -1,4 +1,9 @@
 const userLibrary = [];
+userLibrary.push(new bookBuild('The Hobbit', 'J.R.R. Tolkien', 1937, true))
+userLibrary.push(new bookBuild('I Am Legend', 'Richard Matheson', 1954, false))
+userLibrary.push(new bookBuild('The Martian', 'Andy Weir', 2011, true))
+userLibrary.push(new bookBuild('The Lord of the Rings', 'J.R.R. Tolkien', 1954, false))
+
 
 function bookBuild(bookTitle, bookAuthor, releaseYear, isRead) {
     this.title = bookTitle;
@@ -56,15 +61,19 @@ function addBookToLibrary() {
 }
 
 function createBookCard(title, author, year, isRead) {
+    let status = isRead === true ? 'read' : 'notRead'
     const bookCard = document.createElement('div')
     bookCard.classList.add('bookCard')
     bookCard.innerHTML = `<p>Title: ${title}</p> 
                <p>Author: ${author}</p> 
-                <p>ReleaseYear: ${year}</p> 
-                <p class="bookReadStatus">Status: ${isRead === true ? 'Read' : 'Not Read'}</p>`
+                <p>Release Year: ${year}</p> 
+                <p class="status ${status}">Status: ${isRead === true ? 'Read' : 'Not Read'}</p>`
+
     return bookCard
 }
 
 function renderBook(bookItem) {
     cardCont.appendChild(createBookCard(bookItem['title'], bookItem['author'], bookItem['releaseYear'], bookItem['isReadValue']))
 }
+
+userLibrary.forEach(renderBook)
