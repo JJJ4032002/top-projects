@@ -19,9 +19,21 @@
     </button>
 </header>
 
-<h2>
-    <i class="fa-solid fa-plus"></i>Add a book
-</h2>
+<div class="addBookDiv">
+    <h2 id="addBook">
+        <i class="fa-solid fa-plus"></i>Add a book
+    </h2>
+</div>
+
+<div class="bookCardContainer">
+    <!--    <div class="bookCard">-->
+    <!--        <p>Title: Harry Potter & squad</p>-->
+    <!--        <p>Author: Angelina Jolie</p>-->
+    <!--        <p>Release Year: 2027</p>-->
+    <!--        <p class="bookReadStatus">Status: Read</p>-->
+    <!--    </div>-->
+
+</div>
 
 <dialog id="bookBox">
 
@@ -30,30 +42,31 @@
         <div class="formInput">
             <div>
                 <label for="title">Book title: </label>
-                <input type="text" name="bookTitle" id="title">
+                <input type="text" name="bookTitle" id="title" required>
             </div>
 
             <div><label for="bookAuthor">Book author: </label>
-                <input type="text" name="bookTitle" id="bookAuthor"></div>
+                <input type="text" name="bookTitle" id="bookAuthor" required></div>
 
             <div>
-                <label for="title">Book Release Year: </label>
-                <select>
-                    <option value="default">2015</option>
-                    <option value="default">2018</option>
-                    <option value="default">2021</option>
-                    <option value="default">2023</option>
+                <label for="releaseYear">Book Release Year: </label>
+                <select id="releaseYear" required>
+                    <option disabled selected value="">Select an option</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2021">2021</option>
+                    <option value="2023">2023</option>
                 </select>
             </div>
 
-            <div>
+            <div id="checkReadStatus">
                 <label for="isRead"> Did you read this book?</label>
-                <input type="checkbox" id="isRead" name="vehicle1" value="Bike">
+                <input type="checkbox" id="isRead" value="false">
             </div>
         </div>
 
         <div class="formButtons">
-            <button id="closeBtn">Close</button>
+            <button id="closeBtn" formmethod="dialog">Close</button>
             <button id="submitBtn">Submit</button>
         </div>
 

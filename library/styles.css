@@ -20,17 +20,17 @@ header {
     padding: .8rem;
 }
 
-header > button {
+button {
     color: white;
     border: none;
     border-radius: .4rem;
     padding: .8rem;
-    width: 10%;
+    width: min(10%, fit-content);
     background-color: rgba(59, 59, 59, 0.8);
     transition: background-color .5s ease-out;
 }
 
-header > button:hover {
+button:hover {
     background-color: rgba(0, 0, 0, 0.9);
     color: #ffffff;
     cursor: pointer;
@@ -41,31 +41,44 @@ header > button:hover {
     font-weight: 500;
 }
 
-header + h2 {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
+.addBookDiv {
+    width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addBook {
+    /*position: absolute;*/
+    /*top: 25%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    background-color: rgba(59, 59, 59, 0.8);
+    padding: 1.2rem;
+    border-radius: .2rem;
+    color: whitesmoke;
     margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: 400;
     transition: font-weight 200ms;
     width: fit-content;
+    transition: background-color .5s ease-out;
 }
 
-header + h2:hover {
+#addBook:hover {
+    color: whitesmoke;
     cursor: pointer;
     font-weight: 600;
-    border-bottom: 4px dotted #dbb62f;
+    background-color: rgba(0, 0, 0, 0.9);
 }
+
 
 footer {
     color: black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
     text-align: center;
     width: 100%;
     padding: 2rem;
@@ -76,6 +89,7 @@ footer {
 
 /*endregion*/
 
+/*region Dialog styling*/
 ::backdrop {
     background-image: linear-gradient(
         45deg,
@@ -94,6 +108,9 @@ dialog {
     border-radius: .2rem;
 }
 
+/*endregion*/
+
+/*region Form styling*/
 .formInput {
     display: grid;
     grid-template: 1fr 1fr 1fr/ 1fr;
@@ -108,6 +125,7 @@ dialog {
 .formButtons {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 input {
@@ -118,9 +136,45 @@ input {
 }
 
 
-/* toDo */
-
-input[type="checkbox"] {
-    align-items: start;
+#checkReadStatus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.formButtons button {
+    width: 20%;
+}
+
+/*endregion*/
+
+.bookCardContainer {
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    padding: 2rem;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.bookCard {
+    border: none;
+    border-radius: .4rem;
+    padding: 2rem;
+    background-color: rgba(186, 130, 130, 0.4);
+    width: 100%;
+    border-left: purple 8px solid;
+}
+
+.bookCard p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookReadStatus {
+    margin-top: 2rem;
+    background-color: rgba(255, 255, 255, .7);
+    text-align: center;
+    border-radius: 2px;
+    padding: .5rem;
+}
