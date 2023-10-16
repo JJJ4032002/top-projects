@@ -1,4 +1,5 @@
 const userLibrary = [];
+
 userLibrary.push(new bookBuild('The Hobbit', 'J.R.R. Tolkien', 1937, true))
 userLibrary.push(new bookBuild('I Am Legend', 'Richard Matheson', 1954, false))
 userLibrary.push(new bookBuild('The Martian', 'Andy Weir', 2011, true))
@@ -26,7 +27,7 @@ const cardCont = document.querySelector('.bookCardContainer')
 dBox.addEventListener('close', () => dBox.close())
 showDBoxBtn.addEventListener('click', () => dBox.showModal())
 closeBtn.addEventListener('click', () => {
-    console.log("Button click: close")
+    // console.log("Button click: close")
     dBox.close()
 })
 
@@ -37,15 +38,20 @@ function clearDialog() {
     isRead.checked = false; // Uncheck the isRead checkbox
 }
 
+function clearCardCont() {
+    while (cardCont.firstChild) {
+        cardCont.removeChild(cardCont.firstChild)
+    }
+}
+
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
     addBookToLibrary();
     dBox.close()
-    while (cardCont.firstChild) {
-        cardCont.removeChild(cardCont.firstChild)
-    }
+    clearCardCont()
     clearDialog()
-    userLibrary.forEach(renderBook)
+
+
 });
 
 function addBookToLibrary() {
@@ -60,20 +66,50 @@ function addBookToLibrary() {
     // console.log("Object is", userLibrary[0])
 }
 
-function createBookCard(title, author, year, isRead) {
+function createBookCard(index, title, author, year, isRead) {
     let status = isRead === true ? 'read' : 'notRead'
     const bookCard = document.createElement('div')
     bookCard.classList.add('bookCard')
     bookCard.innerHTML = `<p>Title: ${title}</p> 
                <p>Author: ${author}</p> 
                 <p>Release Year: ${year}</p> 
-                <p class="status ${status}">Status: ${isRead === true ? 'Read' : 'Not Read'}</p>`
-
+                <p class="status ${status}">Status: ${isRead === true ? 'Read' : 'Not Read'}</p>
+                <button class="removeBtn" data-index="${index}">Remove book</button>
+                `
     return bookCard
 }
 
-function renderBook(bookItem) {
-    cardCont.appendChild(createBookCard(bookItem['title'], bookItem['author'], bookItem['releaseYear'], bookItem['isReadValue']))
+function renderBook() {
+    clearCardCont()
+    for (let i = 0; i < userLibrary.length; i++) {
+        const bookItem = userLibrary[i]
+        cardCont.appendChild(createBookCard(i, bookItem['title'], bookItem['author'], bookItem['releaseYear'], bookItem['isReadValue']))
+        // console.log("Book added to library:", userLibrary[i])
+    }
+    removeBtnListeners();
 }
 
-userLibrary.forEach(renderBook)
+function removeBtnListeners() {
+    const removeGrp = document.querySelectorAll('.removeBtn')
+    removeGrp.forEach((removeBtn) => {
+        removeBtn.addEventListener('click', () => {
+            removeBook(removeBtn)
+            renderBook()
+        })
+    })
+}
+
+console.log("Initial library:", userLibrary)
+
+renderBook()
+
+
+function removeBook(removeBtn) {
+    const dataIndex = removeBtn.getAttribute('data-index')
+    console.log("Data index is:", dataIndex)
+    console.log("Old library:", userLibrary)
+    console.log("Book to remove:", userLibrary[dataIndex])
+    userLibrary.splice(dataIndex, 1)
+    console.log("Book removed from library. New library is: ", userLibrary)
+}
+
