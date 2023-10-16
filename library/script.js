@@ -48,10 +48,8 @@ submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
     addBookToLibrary();
     dBox.close()
-    clearCardCont()
     clearDialog()
-
-
+    renderBook()
 });
 
 function addBookToLibrary() {
@@ -67,13 +65,16 @@ function addBookToLibrary() {
 }
 
 function createBookCard(index, title, author, year, isRead) {
-    let status = isRead === true ? 'read' : 'notRead'
     const bookCard = document.createElement('div')
     bookCard.classList.add('bookCard')
-    bookCard.innerHTML = `<p>Title: ${title}</p> 
-               <p>Author: ${author}</p> 
+    const checkboxCheck = isRead === true ? `<input type="checkbox" checked="checked" data-index=${index}>` : `<input type="checkbox" data-index=${index}>`
+    bookCard.innerHTML = `<p>Title: ${title}</p>
+                <p>Author: ${author}</p> 
                 <p>Release Year: ${year}</p> 
-                <p class="status ${status}">Status: ${isRead === true ? 'Read' : 'Not Read'}</p>
+                <div class="status ${isRead === true ? 'read' : 'notRead'}">
+                    <p>Status: ${isRead === true ? 'Read' : 'Not Read'}</p>
+                    ${checkboxCheck}
+                </div>
                 <button class="removeBtn" data-index="${index}">Remove book</button>
                 `
     return bookCard
@@ -87,6 +88,7 @@ function renderBook() {
         // console.log("Book added to library:", userLibrary[i])
     }
     removeBtnListeners();
+    checkboxListeners();
 }
 
 function removeBtnListeners() {
@@ -99,10 +101,27 @@ function removeBtnListeners() {
     })
 }
 
+function checkboxListeners() {
+    const checkboxGrp = document.querySelectorAll('input[type="checkbox"]')
+    checkboxGrp.forEach((checkbox) => {
+        checkbox.addEventListener('click', () => {
+            console.log("Checkbox clicked")
+            changeStatus(checkbox)
+        })
+    })
+}
+
+function changeStatus(checkBox) {
+    const dataIndex = checkBox.getAttribute('data-index')
+    console.log("Data index is:", dataIndex)
+    console.log("First", userLibrary[dataIndex])
+    userLibrary[dataIndex]['isReadValue'] = !userLibrary[dataIndex]['isReadValue']
+    renderBook()
+}
+
 console.log("Initial library:", userLibrary)
 
 renderBook()
-
 
 function removeBook(removeBtn) {
     const dataIndex = removeBtn.getAttribute('data-index')

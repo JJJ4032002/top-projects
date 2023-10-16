@@ -183,6 +183,8 @@ input {
 }
 
 .status {
+    display: flex;
+    justify-content: space-around;
     margin: .6rem 0;
     font-size: 1.2rem;
     font-weight: 500;
@@ -208,4 +210,15 @@ input {
     .bookCardContainer {
         grid-template: 1fr / repeat(4, 1fr);
     }
+}
+
+input[type="checkbox"] {
+    display: inline;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: .2rem;
+    background-color: rgba(54, 140, 210, 0.2);
 }
