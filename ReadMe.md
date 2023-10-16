@@ -48,6 +48,5 @@
 2. Make both all sites responsive
 3. Develop strategies for computer to beat human player more often by observing patterns of user choice and predictions
 4. Use grid for Etch a sketch
-5. Add feature to remove books from library
 
 ### Any suggestions or feedback? Feel free to let me know
