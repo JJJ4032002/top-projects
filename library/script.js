@@ -118,7 +118,7 @@ closeBtn.addEventListener('click', () => {
 });
 // eslint-disable-next-line no-unused-vars
 submitBtn.addEventListener('click', (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     addBookToLibrary();
     dBox.close();
     clearDialog();
