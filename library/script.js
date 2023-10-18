@@ -1,16 +1,16 @@
 const userLibrary = [];
 
-userLibrary.push(new BookBuild('The Hobbit', 'J.R.R. Tolkien', 1937, true));
-userLibrary.push(new BookBuild('I Am Legend', 'Richard Matheson', 1954, false));
-userLibrary.push(new BookBuild('The Martian', 'Andy Weir', 2011, true));
-userLibrary.push(new BookBuild('The Lord of the Rings', 'J.R.R. Tolkien', 1954, false));
-
 function BookBuild(bookTitle, bookAuthor, releaseYear, isRead) {
     this.title = bookTitle;
     this.author = bookAuthor;
     this.releaseYear = releaseYear;
     this.isReadValue = isRead;
 }
+
+userLibrary.push(new BookBuild('The Hobbit', 'J.R.R. Tolkien', 1937, true));
+userLibrary.push(new BookBuild('I Am Legend', 'Richard Matheson', 1954, false));
+userLibrary.push(new BookBuild('The Martian', 'Andy Weir', 2011, true));
+userLibrary.push(new BookBuild('The Lord of the Rings', 'J.R.R. Tolkien', 1954, false));
 
 const h2List = document.querySelectorAll('h2');
 const [showDBoxBtn] = h2List;
@@ -25,10 +25,6 @@ const cardCont = document.querySelector('.bookCardContainer');
 
 dBox.addEventListener('close', () => dBox.close());
 showDBoxBtn.addEventListener('click', () => dBox.showModal());
-closeBtn.addEventListener('click', () => {
-    // console.log("Button click: close")
-    dBox.close();
-});
 
 function clearDialog() {
     bookTitle.value = ''; // Clear the book title input field
@@ -43,14 +39,6 @@ function clearCardCont() {
     }
 }
 
-submitBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    addBookToLibrary();
-    dBox.close();
-    clearDialog();
-    renderBook();
-});
-
 function addBookToLibrary() {
     const title = bookTitle.value;
     const author = bookAuthor.value;
@@ -63,6 +51,7 @@ function addBookToLibrary() {
     // console.log("Object is", userLibrary[0])
 }
 
+// eslint-disable-next-line no-shadow
 function createBookCard(index, title, author, year, isRead) {
     const bookCard = document.createElement('div');
     bookCard.classList.add('bookCard');
@@ -79,15 +68,36 @@ function createBookCard(index, title, author, year, isRead) {
     return bookCard;
 }
 
+function removeBook(removeBtn) {
+    const dataIndex = removeBtn.getAttribute('data-index');
+    userLibrary.splice(dataIndex, 1);
+}
+
 function renderBook() {
     clearCardCont();
-    for (let i = 0; i < userLibrary.length; i++) {
+    for (let i = 0; i < userLibrary.length; i += 1) {
         const bookItem = userLibrary[i];
-        cardCont.appendChild(createBookCard(i, bookItem.title, bookItem.author, bookItem.releaseYear, bookItem.isReadValue));
+        cardCont.appendChild(
+            createBookCard(
+                i,
+                bookItem.title,
+                bookItem.author,
+                bookItem.releaseYear,
+                bookItem.isReadValue,
+            ),
+        );
         // console.log("Book added to library:", userLibrary[i])
     }
+    // eslint-disable-next-line no-use-before-define
     removeBtnListeners();
+    // eslint-disable-next-line no-use-before-define
     checkboxListeners();
+}
+
+function changeStatus(checkBox) {
+    const dataIndex = checkBox.getAttribute('data-index');
+    userLibrary[dataIndex].isReadValue = !userLibrary[dataIndex].isReadValue;
+    renderBook();
 }
 
 function removeBtnListeners() {
@@ -100,33 +110,26 @@ function removeBtnListeners() {
     });
 }
 
+renderBook();
+
+closeBtn.addEventListener('click', () => {
+    // console.log("Button click: close")
+    dBox.close();
+});
+// eslint-disable-next-line no-unused-vars
+submitBtn.addEventListener('click', (event) => {
+    // event.preventDefault();
+    addBookToLibrary();
+    dBox.close();
+    clearDialog();
+    renderBook();
+});
+
 function checkboxListeners() {
     const checkboxGrp = document.querySelectorAll('input[type="checkbox"]');
     checkboxGrp.forEach((checkbox) => {
         checkbox.addEventListener('click', () => {
-            console.log('Checkbox clicked');
             changeStatus(checkbox);
         });
     });
-}
-
-function changeStatus(checkBox) {
-    const dataIndex = checkBox.getAttribute('data-index');
-    console.log('Data index is:', dataIndex);
-    console.log('First', userLibrary[dataIndex]);
-    userLibrary[dataIndex].isReadValue = !userLibrary[dataIndex].isReadValue;
-    renderBook();
-}
-
-console.log('Initial library:', userLibrary);
-
-renderBook();
-
-function removeBook(removeBtn) {
-    const dataIndex = removeBtn.getAttribute('data-index');
-    console.log('Data index is:', dataIndex);
-    console.log('Old library:', userLibrary);
-    console.log('Book to remove:', userLibrary[dataIndex]);
-    userLibrary.splice(dataIndex, 1);
-    console.log('Book removed from library. New library is: ', userLibrary);
 }
