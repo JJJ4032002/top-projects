@@ -11,5 +11,82 @@
 </head>
 <body>
 
+<header>
+    <img src="resources/weather-icon.svg">
+    <h1>Seize the weather</h1>
+</header>
+
+<nav>
+    <div class="search">
+        <label for="searchBox">Location: </label>
+        <input type="text" id="searchBox" placeholder="Search for new location">
+    </div>
+
+    <div class="locationInfo">
+        <div class="location">
+            <div class="country">Great Britain</div>
+            <div class="city">London</div>
+        </div>
+
+        <div class="stateIcon">
+            <h4>Time of day</h4>
+            <img src="resources/moon-sleep.svg" alt="">
+        </div>
+    </div>
+
+</nav>
+
+<main>
+    <div class="temp">
+        <h4 id="currTempInfo">
+            Current temperature:
+        </h4>
+        <h5>
+            Switch to °F
+        </h5>
+    </div>
+    <div class="rainDays">
+        <h2>
+            Weather data over the next 5 hours
+        </h2>
+
+        <div class="table">
+            <div class="tableHeader">
+                <h3>Time</h3>
+                <h3>Temperature</h3>
+                <h3>Chance of rain</h3>
+                <h3>Wind speed</h3>
+            </div>
+
+            <div class="tableInfo">
+                <div class="tableRow">
+                    <p>08.00 hrs</p>
+                    <p>4 °C</p>
+                    <p>85%</p>
+                    <p>2 kph</p>
+                </div>
+
+                <div class="tableRow">
+                    <p>08.00 hrs</p>
+                    <p>4 °C</p>
+                    <p>85%</p>
+                    <p>2 kph</p>
+                </div>
+
+                <div class="tableRow">
+                    <p>08.00 hrs</p>
+                    <p>4 °C</p>
+                    <p>85%</p>
+                    <p>2 kph</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</main>
+
 </body>
 </html>

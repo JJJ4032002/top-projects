@@ -4,3 +4,107 @@
     box-sizing: border-box;
 }
 
+
+/*region Container styling*/
+header {
+    background-color: rgba(0, 0, 0, .99);
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.locationInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.location {
+    padding: 2rem 0;
+    border: 2px skyblue solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.temp {
+    padding: 2rem;
+    text-align: center;
+}
+
+.table {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    border: 2px solid violet;
+}
+
+.tableHeader,
+.tableRow {
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    text-align: center;
+}
+
+.tableHeader {
+    border: 2px solid skyblue;
+    height: min-content;
+
+}
+
+.tableInfo {
+    border: 2px solid magenta;
+}
+
+.tableRow {
+    text-align: center;
+}
+
+/*endregion*/
+
+
+/*region Various element styling*/
+
+.location {
+    flex-grow: 4;
+}
+
+.stateIcon {
+    flex-grow: 1;
+    text-align: center;
+    align-self: center;
+}
+
+img {
+    height: 2.1rem;
+}
+
+.location > div {
+    font-size: 2rem;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+.search label {
+    font-size: 1.2rem;
+    margin-right: .3rem;
+}
+
+.search input {
+    font-size: .9rem;
+    padding: .2rem;
+}
+
+.temp h4 {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/*endregion*/
