@@ -4,13 +4,12 @@ const apiMethod = 'current';
 const queryParam = 'London';
 
 const stateIconCont = document.querySelector('.stateIcon');
-const icon = stateIconCont.querySelector('img');
+const iconImg = stateIconCont.querySelector('img');
 const currentTemp = document.querySelector('#currTempInfo');
 
 const setProps = (weatherData) => {
     currentTemp.innerText += ` ${weatherData.current.feelslike_c} °C`;
-    const iconURL = `https:${weatherData.current.condition.icon}`;
-    icon.src = iconURL;
+    iconImg.src = `https:${weatherData.current.condition.icon}`;
 };
 
 const getWeather = async function getWeatherFromAPI() {
