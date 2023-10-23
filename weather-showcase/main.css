@@ -40,8 +40,7 @@ header {
 
 .table {
     display: grid;
-    grid-template: 1fr 1fr / 1fr;
-    border: 2px solid violet;
+    grid-template: min-content 1fr / 1fr;
 }
 
 .tableHeader,
@@ -52,17 +51,16 @@ header {
 }
 
 .tableHeader {
-    border: 2px solid skyblue;
     height: min-content;
 
 }
 
 .tableInfo {
-    border: 2px solid magenta;
 }
 
 .tableRow {
     text-align: center;
+    height: min-content;
 }
 
 /*endregion*/
