@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+::backdrop {
+    background-image: linear-gradient(
+        45deg,
+        #b9feff,
+        #6185b3,
+        #0e4691
+    );
+    opacity: .95;
+}
 
 /*region Container styling*/
 
@@ -58,6 +67,11 @@ nav {
     text-align: center;
 }
 
+.stateIcon {
+    display: flex;
+    flex-direction: column;
+}
+
 .table {
     display: grid;
     grid-template: min-content 1fr / 1fr;
@@ -88,6 +102,55 @@ nav {
     text-align: center;
     height: min-content;
 
+}
+
+#errorDialog {
+    background: rgb(140, 70, 70);
+    color: whitesmoke;
+    padding: .5rem;
+    font-size: 1rem;
+    margin-top: 10%;
+    margin: 10% auto 0px;
+    border-radius: .2rem;
+    border: none;
+}
+
+.errorDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.errorDiv * {
+    text-align: center;
+    padding: 1rem;
+}
+
+.errorDiv h2 {
+    padding: 1rem;
+    font-size: 1.4rem;
+
+}
+
+.errorDiv p {
+    font-size: 1.1rem;
+}
+
+.errorDiv button {
+    align-self: center;
+    width: min-content;
+    padding: .8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: .2rem;
+    transition: color 100ms ease-out,
+    background-color 100ms ease-in;
+
+}
+
+.errorDiv button:hover {
+    background: rgba(27, 28, 28, 0.75);
+    color: whitesmoke;
+    cursor: pointer;
 }
 
 /*endregion*/
@@ -122,6 +185,10 @@ img {
 
 .location > div {
     font-size: 2rem;
+}
+
+#city {
+    font-size: 1.5rem;
 }
 
 h1 {
