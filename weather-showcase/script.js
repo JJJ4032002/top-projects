@@ -3,6 +3,7 @@ const API_KEY = '3873a8dd6a78429394034449232210';
 const BASE_URL = 'http://api.weatherapi.com/v1';
 const apiMethod = 'forecast';
 const queryParam = 'Mutare';
+const tempChoice = ['feelslike_c', 'feelslike_f'];
 
 const stateIconCont = document.querySelector('.stateIcon');
 const iconImg = stateIconCont.querySelector('img');
@@ -52,7 +53,7 @@ function getTime(timeContainer) {
  * This function processes each row by updating the values of each row column with the values from the api response
  * @param weatherData json object from the api call
  */
-function processRows(weatherData) {
+function processRows(weatherData, unitChoice) {
     // console.log(weatherData.forecast.forecastday[0].hour[0].time);
     // console.log(weatherData.forecast.forecastday[0].hour[0].temp_c);
     const hoursList = buildForecast(weatherData);
@@ -77,7 +78,8 @@ function processRows(weatherData) {
         timeEl.innerText = `${showTime.substring(0)}`;
         nextTimeHour += 1;
         // console.log(`After incr: ${nextTimeHour}`);
-        tempEl.innerText = hourObj.temp_c;
+        tempEl.innerText = (unitChoice === 't') ? hourObj.feelslike_c : hourObj.feelslike_f;
+        // tempEl.innerText = hourObj.temp_c;
         chanceEl.innerText = `${hourObj.chance_of_rain} %`;
         windEl.innerText = `${hourObj.wind_kph} kph`;
     }
@@ -87,13 +89,15 @@ function processRows(weatherData) {
  * This method sets the values of all the elements that need to be updated
  * @param weatherData
  */
-const setProps = (weatherData) => {
-    currentTemp.innerText = `Current temperature: ${weatherData.current.feelslike_c} °C`;
+const setProps = (weatherData, unitChoice) => {
+    const currTempString = 'Current temperature: ';
+    currentTemp.innerText = currTempString + ((unitChoice === 't') ? `${weatherData.current.feelslike_c} °C`
+        : `${weatherData.current.feelslike_f} °F`);
     country.innerText = weatherData.location.country;
     city.innerText = weatherData.location.name;
     // eslint-disable-next-line prefer-destructuring
     currTime.innerText = getTime(weatherData.location.localtime)[0];
-    processRows(weatherData);
+    processRows(weatherData, unitChoice);
 };
 
 /**
@@ -102,7 +106,7 @@ const setProps = (weatherData) => {
  */
 const getWeather = async function getWeatherFromAPI(queryVal) {
     const apiResponse = await fetch(
-        `${BASE_URL}/${apiMethod}.json?key=${API_KEY}&q=${queryVal}`,
+        `${BASE_URL}/${apiMethod}.json?key=${API_KEY}&q=${queryVal}&days=10`,
         { mode: 'cors' },
     );
     if (apiResponse.ok) {
@@ -133,7 +137,7 @@ async function main(queryValue) {
     bodyDisplay('none');
     const weatherData = await getWeather(queryValue);
     if (weatherData !== -1) {
-        setProps(weatherData);
+        setProps(weatherData, 'f');
     } else {
         showDiagOnError();
     }

@@ -24,6 +24,11 @@ body {
     );
 }
 
+.temp h5:hover {
+    cursor: pointer;
+    color: rgba(13, 14, 16, 0.82);
+}
+
 header {
     background-color: rgba(0, 0, 0, .99);
     display: flex;
