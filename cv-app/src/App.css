@@ -1,5 +1,11 @@
-div{
+div.formDiv{
     display: grid;
     grid-template-columns: auto auto;
-    gap: 2rem;
+    gap: .9rem;
+    justify-content: space-around;
+}
+
+h2, h3 {
+    text-align: center;
+    margin: 1rem;
 }
