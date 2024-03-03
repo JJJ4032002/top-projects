@@ -1,5 +1,13 @@
-import './Header.css';
+import "./Header.css";
+import GenericForm from "../GenericForm/GenericForm.jsx";
 
-function Header() {
+function Header({fields, onSubmit}) {
 
+    return (
+        <>
+            <GenericForm fields={fields} onSubmit={onSubmit}></GenericForm>
+        </>
+    );
 }
+
+export default Header;
