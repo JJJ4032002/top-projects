@@ -1,5 +1,24 @@
 .wrapperDiv{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 10rem 10rem ;
+    margin: .5rem;
+    justify-items: start;
+}
+
+button{
+    margin: .2rem;
+    font-size: .9rem;
+    padding: .5rem;
+    background-color: #787d77;
+    color: white;
+}
+
+form{
+    padding: 2rem;
+    background-color: #ececf0;
+    border-radius: 5px;
+}
+
+button{
+    font-weight: 400;
 }
