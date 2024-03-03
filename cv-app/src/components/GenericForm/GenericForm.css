@@ -21,4 +21,14 @@ form{
 
 button{
     font-weight: 400;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 2px;
+    transition: outline-color ease-in 10ms;
+    outline: 2px solid transparent;
+}
+
+button:hover{
+    cursor: pointer;
+    outline-color: coral;
 }
