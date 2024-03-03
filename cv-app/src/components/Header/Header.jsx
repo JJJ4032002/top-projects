@@ -1,4 +1,3 @@
-import "./Header.css";
 import GenericForm from "../GenericForm/GenericForm.jsx";
 
 function Header({fields, onSubmit}) {
