@@ -1,6 +1,6 @@
 div.formDiv{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     gap: .9rem;
     justify-content: space-around;
 }
