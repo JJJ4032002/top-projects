@@ -11,6 +11,9 @@ const fields = [
     { name: "myLastStartDate", label: "Start date", type: "date" },
     { name: "myLastEndDate", label: "End date", type: "date" },
     { name: "myLastDescription", label: "Description", type: "text" },
+    { name: "myProject", label: "Project Name", type: "text" },
+    { name: "myProjectDescription", label: "Description", type: "text" },
+    { name: "myProjectLink", label: "Relevant web link", type: "text" },
 ];
 
 export default fields;
