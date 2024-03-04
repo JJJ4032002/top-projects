@@ -35,7 +35,7 @@ button:hover{
 }
 
 /* Tablets and larger */
-@media (min-width: 768px) {
+@media (min-width: 890px) {
     div.formDiv{
         grid-template-columns: auto auto;
     }
@@ -46,7 +46,7 @@ button:hover{
 }
 
 /* Desktops and larger */
-@media (min-width: 1024px) {
+@media (min-width: 1270px) {
     div.formDiv{
         grid-template-columns: auto auto auto;
     }
