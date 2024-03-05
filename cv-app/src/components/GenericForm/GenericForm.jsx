@@ -6,11 +6,11 @@ function GenericForm({ fields, onSubmit, title = '' }) {
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
-        console.log("Form: ", form);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log("Form: ", form);
         onSubmit(form);
     };
 

@@ -9,3 +9,9 @@ h2, h3 {
     text-align: center;
     margin: 1rem;
 }
+
+.formDiv{
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1.2rem solid black;
+}
