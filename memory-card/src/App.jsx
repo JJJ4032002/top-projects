@@ -1,14 +1,22 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useState, useEffect } from "react";
 import "./App.css";
+import { getHeroLibrary } from "./Heroes.js";
 
 function App() {
-    const [count, setCount] = useState(0);
+    const [heroes, setHeroes] = useState([{name:'Lyton', heroId:123}]);
+
+    useEffect(() => {
+        setHeroes(getHeroLibrary);
+    }, []);
+
+    console.log("Look, the heroes:" , heroes);
 
     return (
         <>
             <h2>Galaxy Heroes</h2>
+            {heroes.map((hero, index) => {
+                <li key={hero.heroId}>{hero.name}</li>;
+            })}
         </>
     );
 }
