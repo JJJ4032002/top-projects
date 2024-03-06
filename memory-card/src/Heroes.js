@@ -19,7 +19,7 @@ const getHeroes = async (url, oldHeroes) => {
     }
 };
 
-let heroLibrary = [{ name: "lyton" }];
+let heroLibrary = [];
 const publicKeyCredential = import.meta.env.VITE_REACT_APP_MARVEL_API_KEY_PUBLIC;
 const privateKeyCredential = import.meta.env.VITE_REACT_APP_MARVEL_API_KEY_PRIVATE;
 const currTime = new Date().getTime();
@@ -29,6 +29,7 @@ const hashedUrl =
 
 const updateLibrary = async function () {
     heroLibrary = await getHeroes(hashedUrl, heroLibrary);
+    console.log(heroLibrary)
 };
 
 updateLibrary();
