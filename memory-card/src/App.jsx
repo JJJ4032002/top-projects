@@ -3,20 +3,25 @@ import "./App.css";
 import { getHeroLibrary } from "./Heroes.js";
 
 function App() {
-    const [heroes, setHeroes] = useState([{name:'Lyton', heroId:123}]);
+    const [heroes, setHeroes] = useState([{ name: "My first hero", heroId: 1223 }]);
 
     useEffect(() => {
-        setHeroes(getHeroLibrary);
-    }, []);
+        // infinte loop
+        // setHeroes([...heroes, ...getHeroLibrary()]);
 
-    console.log("Look, the heroes:" , heroes);
+        setHeroes(...heroes, ...getHeroLibrary());
+    }, [heroes]);
+
+    console.log("Look, the heroes(b4 return):", heroes);
 
     return (
         <>
             <h2>Galaxy Heroes</h2>
-            {heroes.map((hero, index) => {
-                <li key={hero.heroId}>{hero.name}</li>;
-            })}
+            <ul>
+                {heroes.map((hero, index) => {
+                    return <li key={hero.heroId}>{hero.name}</li>;
+                })}
+            </ul>
         </>
     );
 }
