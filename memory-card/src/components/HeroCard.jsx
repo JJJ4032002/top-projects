@@ -1,3 +1,5 @@
+import './HeroCard.css'
+
 function HeroCard({heroes, loadingState}) {
 
     const renderContent = () => {
@@ -7,11 +9,17 @@ function HeroCard({heroes, loadingState}) {
 
         if (Array.isArray(heroes) && heroes.length > 0) {
             return (
-                <div>
-                    <h2>{heroes[0].name}</h2>
-                    <img src={heroes[0].thumbnail.path+"/landscape_xlarge."+heroes[0].thumbnail.extension}
-                         alt={"An image of" + heroes[0].name}/>
-                </div>
+                heroes.map((hero, index) => {
+                    return (
+                        <div className={'heroCardDiv'} key={hero.id}>
+                            <h2>{hero.name}</h2>
+                            <img className={'heroImage'}
+                                 src={hero.thumbnail.path + "/landscape_xlarge." + hero.thumbnail.extension}
+                                 alt={"An image of the hero, " + hero.name}
+                            />
+                        </div>
+                    )
+                })
 
             );
         }
@@ -24,7 +32,10 @@ function HeroCard({heroes, loadingState}) {
 
     return (<>
         <>
-            {renderContent()}
+            <div className={'heroCardsContainer'}>
+                {renderContent()}
+            </div>
+
         </>
 
     </>)
