@@ -25,7 +25,9 @@ const privateKeyCredential = import.meta.env.VITE_REACT_APP_MARVEL_API_KEY_PRIVA
 const currTime = new Date().getTime();
 const hashedUrl =
     `https://gateway.marvel.com/v1/public/characters?ts=${currTime}&apikey=${publicKeyCredential}` +
-    `&hash=${hashingAlgo(publicKeyCredential, privateKeyCredential, currTime)}`;
+    `&hash=${hashingAlgo(publicKeyCredential, privateKeyCredential, currTime)}` +
+    `&limit=5`
+;
 
 export const heroesEndpoint = async () => {
     return [...await getHeroes(hashedUrl,heroLibrary)];
