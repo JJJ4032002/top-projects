@@ -17,7 +17,11 @@ function HeroCard({heroes, loadingState}) {
                 <>
                     {filteredHeroes.map((hero) => {
                         return (
-                            <div className={'heroCardDiv'} key={hero.id}>
+                            <div className={'heroCardDiv'} key={hero.id}
+                                 onClick={(e) => {
+                                     console.log("Clicked on hero: ", hero.name)
+                                 }}
+                            >
                                 <h2>{hero.name}</h2>
                                 <img className={'heroImage'}
                                      src={hero.thumbnail.path + "/landscape_xlarge." + hero.thumbnail.extension}
