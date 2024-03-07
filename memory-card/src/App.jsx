@@ -1,27 +1,31 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { getHeroLibrary } from "./Heroes.js";
+import {heroesEndpoint} from "./Heroes.js";
+import HeroCard from "./components/HeroCard.jsx";
 
 function App() {
-    const [heroes, setHeroes] = useState([{ name: "My first hero", heroId: 1223 }]);
+    const [heroes, setHeroes] = useState([]);
 
-    useEffect(() => {
-        // infinte loop
-        // setHeroes([...heroes, ...getHeroLibrary()]);
+    useEffect( () => {
+        const fetchHeroes = async () => {
+            const heroLibrary = await heroesEndpoint();
+            console.log("Main app heroes: ", heroLibrary);
+            setHeroes([...heroes, ...heroLibrary]);
+        };
 
-        setHeroes(...heroes, ...getHeroLibrary());
-    }, [heroes]);
-
-    console.log("Look, the heroes(b4 return):", heroes);
+        fetchHeroes();
+    }, []);
 
     return (
         <>
             <h2>Galaxy Heroes</h2>
-            <ul>
-                {heroes.map((hero, index) => {
-                    return <li key={hero.heroId}>{hero.name}</li>;
-                })}
-            </ul>
+            <HeroCard heroesApi={ heroes }></HeroCard>
+
+            {/*<ul>*/}
+            {/*    {heroes.map((hero, index) => {*/}
+            {/*        return <li key={hero.id}>{hero.name}</li>;*/}
+            {/*    })}*/}
+            {/*</ul>*/}
         </>
     );
 }
