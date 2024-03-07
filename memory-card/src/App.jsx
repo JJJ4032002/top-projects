@@ -23,12 +23,6 @@ function App() {
         <>
             <h2>Galaxy Heroes</h2>
             <HeroCard heroes={ heroes } loadingState={isLoading}></HeroCard>
-
-            {/*<ul>*/}
-            {/*    {heroes.map((hero, index) => {*/}
-            {/*        return <li key={hero.id}>{hero.name}</li>;*/}
-            {/*    })}*/}
-            {/*</ul>*/}
         </>
     );
 }
