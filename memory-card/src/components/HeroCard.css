@@ -10,10 +10,23 @@
     border-radius: 15px;
 }
 
+.heroCardDiv:hover{
+    background-color: #9ca8bc;
+    filter: drop-shadow(0 0 0.2rem #d02323);
+    cursor: pointer;
+}
+
 .heroImage{
     padding: 0;
     margin: 0;
     border-radius: 15px;
+}
+
+.heroCount{
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+
 }
 
 @media (min-width: 1320px){
