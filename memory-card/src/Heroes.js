@@ -30,6 +30,3 @@ const hashedUrl =
 export const heroesEndpoint = async () => {
     return [...await getHeroes(hashedUrl,heroLibrary)];
 }
-// heroLibrary = [...]
-//
-// export const getHeroLibrary = () => {return heroLibrary};
