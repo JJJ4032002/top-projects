@@ -1,0 +1,38 @@
+.heroCardsContainer{
+    display:grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+}
+
+.heroCardDiv{
+    background-color: #ad9f9f;
+    padding: 1.2rem;
+    border-radius: 15px;
+}
+
+.heroImage{
+    padding: 0;
+    margin: 0;
+    border-radius: 15px;
+}
+
+@media (min-width: 1320px){
+    .heroCardsContainer{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media (max-width: 1320px) and (min-width: 990px){
+    .heroCardsContainer{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (max-width: 990px) and (min-width: 720px){
+    .heroCardsContainer{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
