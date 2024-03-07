@@ -26,7 +26,7 @@ const currTime = new Date().getTime();
 const hashedUrl =
     `https://gateway.marvel.com/v1/public/characters?ts=${currTime}&apikey=${publicKeyCredential}` +
     `&hash=${hashingAlgo(publicKeyCredential, privateKeyCredential, currTime)}` +
-    `&limit=5`
+    `&limit=20`
 ;
 
 export const heroesEndpoint = async () => {
