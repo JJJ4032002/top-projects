@@ -21,7 +21,7 @@ function App() {
 
     return (
         <>
-            <h2>Galaxy Heroes</h2>
+            <h2>Marvel Galaxy Heroes</h2>
             <HeroCard heroes={ heroes } loadingState={isLoading}></HeroCard>
         </>
     );
