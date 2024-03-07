@@ -7,6 +7,10 @@ function App() {
     const [isLoading, setLoading] = useState(true);
     const [heroes, setHeroes] = useState([]);
 
+    // toDo: add a state for the current score and best score, shuffle on click and keep track of score
+    // score is determined by number of unique heroes clicked in a row. If a hero is clicked twice, the score resets to 0
+    // and the best score is updated if the current score is higher than the best score
+
     useEffect(() => {
         const fetchHeroes = async () => {
             setLoading(true);
