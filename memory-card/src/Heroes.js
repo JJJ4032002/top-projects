@@ -27,11 +27,9 @@ const hashedUrl =
     `https://gateway.marvel.com/v1/public/characters?ts=${currTime}&apikey=${publicKeyCredential}` +
     `&hash=${hashingAlgo(publicKeyCredential, privateKeyCredential, currTime)}`;
 
-const updateLibrary = async function () {
-    heroLibrary = await getHeroes(hashedUrl, heroLibrary);
-    console.log(heroLibrary)
-};
-
-updateLibrary();
-
-export const getHeroLibrary = () => {return heroLibrary || []};
+export const heroesEndpoint = async () => {
+    return [...await getHeroes(hashedUrl,heroLibrary)];
+}
+// heroLibrary = [...]
+//
+// export const getHeroLibrary = () => {return heroLibrary};
