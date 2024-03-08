@@ -1,11 +1,10 @@
+import './GameIntroModal.css'
 function GameIntroModal({ onClose }) {
     return (
-        <div className="modalBackdrop">
-            <div className="modalContent">
-                <p>This is a modal!</p>
-                <button onClick={onClose}>Close</button>
-            </div>
-        </div>
+        <dialog open>
+            <h2>Hey, cool modal here</h2>
+            <button onClick={onClose}>Close</button>
+        </dialog>
     );
 }
 
