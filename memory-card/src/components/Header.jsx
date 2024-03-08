@@ -8,6 +8,7 @@ function Header({currentScore, bestScore}) {
             <ul>
                 <li>Current score: {currentScore}</li>
                 <li>Best score🎯: {bestScore}</li>
+                <li>Lyton's best score: 14</li>
             </ul>
         </div>
     );
