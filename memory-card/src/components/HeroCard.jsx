@@ -1,10 +1,12 @@
 import './HeroCard.css'
 
-function HeroCard({heroes, loadingState}) {
+function HeroCard({heroes, loadingState, onClickHandler}) {
 
     const filteredHeroes = heroes.filter(
         hero => hero.thumbnail.path !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
     );
+
+    console.log(onClickHandler)
 
     console.log("Filtered heroes: ", filteredHeroes)
 
@@ -20,6 +22,7 @@ function HeroCard({heroes, loadingState}) {
                             <div className={'heroCardDiv'} key={hero.id}
                                  onClick={(e) => {
                                      console.log("Clicked on hero: ", hero.name)
+                                     onClickHandler(hero.id)
                                  }}
                             >
                                 <h2>{hero.name}</h2>
