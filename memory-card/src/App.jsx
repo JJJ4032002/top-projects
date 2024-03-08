@@ -15,8 +15,12 @@ function App() {
     const [bestScore, setBestScore] = useState(0);
     const [currScore, setCurrScore] = useState(0);
 
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () =>setIsModalOpen(false);
+    const openModal = () => {
+        setIsModalOpen(true)
+    };
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
     // toDo: add a state for the current score and best score, shuffle on click and keep track of score
     // score is determined by number of unique heroes clicked in a row. If a hero is clicked twice, the score resets to 0
@@ -27,24 +31,24 @@ function App() {
             setLoading(true);
             const heroLibrary = await heroesEndpoint();
             console.log("Main app heroes: ", heroLibrary);
-            setCalls(numApiCalls+1);
+            setCalls(numApiCalls + 1);
             console.log("We have made this many api calls: ", numApiCalls)
             setHeroes(heroShuffler([...heroes, ...heroLibrary]));
             setLoading(false)
         };
 
         fetchHeroes();
-        console.log("calls: ",numApiCalls)
+        console.log("calls: ", numApiCalls)
     }, []);
 
-    const handleHeroClick = (heroId) =>{
+    const handleHeroClick = (heroId) => {
 
-        if (clickedHeroes.has(heroId)){
+        if (clickedHeroes.has(heroId)) {
             setCurrScore(0)
             setClickedHeroes(new Set())
-        }else {
-            setCurrScore(currScore+1);
-            setBestScore(Math.max(bestScore, currScore+1));
+        } else {
+            setCurrScore(currScore + 1);
+            setBestScore(Math.max(bestScore, currScore + 1));
             setClickedHeroes(new Set().add(heroId))
         }
         setHeroes(heroShuffler(heroes))
