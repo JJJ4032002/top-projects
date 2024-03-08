@@ -1,4 +1,4 @@
-:global(.modalBackdrop) {
+::backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-:global(dialog) {
+dialog {
     margin: 5rem auto auto;
     padding: 1rem;
     border: none;
