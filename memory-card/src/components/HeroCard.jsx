@@ -6,8 +6,6 @@ function HeroCard({heroes, loadingState, onClickHandler}) {
         hero => hero.thumbnail.path !== "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
     );
 
-    console.log(onClickHandler)
-
     console.log("Filtered heroes: ", filteredHeroes)
 
     const renderContent = () => {
